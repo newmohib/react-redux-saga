@@ -1,20 +1,21 @@
-const initialState = {
-    age:20
-};
+import { combineReducers } from 'redux'
 
-const reducer = (state=initialState, action) => {
-    const newState = {...state};
+import counter from '../components/Counters/reducer'
 
-    switch(action.type){
-        case 'AGE_UP': 
-            newState.age += action.value;
-            break;
-        
-        case 'AGE_DOWN': 
-            newState.age -= action.value;
-            break;
-    }
-    return newState;
-};
 
-export default reducer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default combineReducers({
+    counter:counter,
+  })
